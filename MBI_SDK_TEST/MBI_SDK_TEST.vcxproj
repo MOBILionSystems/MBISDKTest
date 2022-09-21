@@ -209,10 +209,10 @@ copy $(ProjectDir)lib\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*</Comman
 echo copy C:\dev\MBISDK\MBI_SDK\MBI_SDK.zip $(SolutionDir)zip\MBI_SDK.zip
 echo We are removing the copying of the MBI_SDK.zip file from this test harness pre-build step
 echo running batch file to unzip the zip file
-call $(SolutionDir)zip\unzipmbisdk.bat
+echo call $(SolutionDir)zip\unzipmbisdk.bat
 echo called the batch file
-copy $(ProjectDir)headers\*.h  $(ProjectDir)*.h
-copy $(ProjectDir)lib\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*
+echo copy $(ProjectDir)headers\*.h  $(ProjectDir)*.h
+echo copy $(ProjectDir)lib\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*
 </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
