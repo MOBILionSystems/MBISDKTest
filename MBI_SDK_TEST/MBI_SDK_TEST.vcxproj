@@ -206,7 +206,8 @@ copy $(ProjectDir)lib\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*</Comman
     </ResourceCompile>
     <PreBuildEvent>
       <Command>echo copying MBI_SDK.zip from MBISDK to MBISDKTest zip directory
-copy C:\dev\MBISDK\MBI_SDK\MBI_SDK.zip $(SolutionDir)zip\MBI_SDK.zip
+echo copy C:\dev\MBISDK\MBI_SDK\MBI_SDK.zip $(SolutionDir)zip\MBI_SDK.zip
+echo We are removing the copying of the MBI_SDK.zip file from this test harness pre-build step
 echo running batch file to unzip the zip file
 call $(SolutionDir)zip\unzipmbisdk.bat
 echo called the batch file

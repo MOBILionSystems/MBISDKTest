@@ -351,7 +351,7 @@ void CMBISDKTESTDlg::OnBnClickedBtnMzMicro()
 	{
 		if (pMyCalib != NULL)
 		{
-			double dbIndex4 = pMyCalib->MzToMicroseconds(100000.0);
+			double dbIndex4 = pMyCalib->MzToMicroseconds(100.0);
 			std::string strTitle = "";
 			ShowOutputDB(IDC_STATIC_9, strTitle, dbIndex4);
 		}
@@ -549,6 +549,10 @@ void CMBISDKTESTDlg::OnBnClickedBtnIsFragData()
 		{
 			nFrameIndex = 1; //back to one
 		}
+		else if (nFrameIndex < 1)
+		{
+			nFrameIndex = 1;
+		}
 		std::shared_ptr<MBI::FrameMetadata> pFrameMetaData = pMyFile->GetFrameMetadata(nFrameIndex);
 
 		std::shared_ptr<MBI::Frame> frameTemp1 = pMyFile->GetFrame(nFrameIndex);
@@ -588,7 +592,7 @@ void CMBISDKTESTDlg::OnBnClickedBtnLoadFrames()
 
 			vListOfFrames.empty();
 		}
-		std::string strTitle = "Frame Load Test Completed ";
+		std::string strTitle = "Frame Load Test Completed.";
 		ShowOutput(IDC_STATIC_20, strTitle, -1);
 	}
 }
