@@ -1,2 +1,2 @@
-tar -xf C:\dev\MBISDKTest\MBISDKTest\zip\MBI_SDK.zip
+tar -xf MBI_SDK.zip
 
