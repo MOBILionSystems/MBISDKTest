@@ -206,7 +206,7 @@ copy $(ProjectDir)lib\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*</Comman
     </ResourceCompile>
     <PreBuildEvent>
       <Command>echo copying MBI_SDK.zip from MBISDK to MBISDKTest zip directory
-setcwd $(SolutionDir)zip
+cd $(SolutionDir)zip
 call $(SolutionDir)zip\unzipmbisdk.bat
 echo called the batch file
 copy $(SolutionDir)zip\headers\*.h  $(ProjectDir)*.h
