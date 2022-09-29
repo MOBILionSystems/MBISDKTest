@@ -608,7 +608,7 @@ void CMBISDKTESTDlg::OnBnClickedButtonShowAttic()
 		std::shared_ptr<MBI::FrameMetadata> pFrameMetaData = pMyFile->GetFrameMetadata(nFrameIndex);
 		std::shared_ptr<MBI::Frame> frameTemp1 = pMyFile->GetFrame(nFrameIndex);
 
-		std::shared_ptr<std::vector<int>> attic_list = frameTemp1->GetATTicList();
+		std::shared_ptr<std::vector<int64_t>> attic_list = frameTemp1->GetATTicList();
 
 		size_t nSize = attic_list->size();
 		for (size_t nIndex = 0; nIndex < nSize; nIndex++)
@@ -667,7 +667,7 @@ void CMBISDKTESTDlg::OnBnClickedButtonIndexCount()
 		std::shared_ptr<MBI::FrameMetadata> pFrameMetaData = pMyFile->GetFrameMetadata(nFrameIndex);
 		std::shared_ptr<MBI::Frame> frameTemp1 = pMyFile->GetFrame(nFrameIndex);
 
-		std::shared_ptr<std::vector<int>> index_count_list = frameTemp1->GetSampleOffsets();
+		std::shared_ptr<std::vector<int64_t>> index_count_list = frameTemp1->GetSampleOffsets();
 
 		size_t nSize = index_count_list->size();
 		for (size_t nIndex = 0; nIndex < nSize; nIndex++)
@@ -700,7 +700,7 @@ void CMBISDKTESTDlg::OnBnClickedButtonIndexPosition()
 		std::shared_ptr<MBI::FrameMetadata> pFrameMetaData = pMyFile->GetFrameMetadata(nFrameIndex);
 		std::shared_ptr<MBI::Frame> frameTemp1 = pMyFile->GetFrame(nFrameIndex);
 
-		std::shared_ptr<std::vector<int>> index_position_list = frameTemp1->GetGateIndexOffsets();
+		std::shared_ptr<std::vector<int64_t>> index_position_list = frameTemp1->GetGateIndexOffsets();
 
 		size_t nSize = index_position_list->size();
 		for (size_t nIndex = 0; nIndex < nSize; nIndex++)
@@ -764,7 +764,7 @@ void CMBISDKTESTDlg::OnBnClickedButtonDataPosition()
 		std::shared_ptr<MBI::FrameMetadata> pFrameMetaData = pMyFile->GetFrameMetadata(nFrameIndex);
 		std::shared_ptr<MBI::Frame> frameTemp1 = pMyFile->GetFrame(nFrameIndex);
 
-		std::shared_ptr<std::vector<std::pair<int, int>>> data_count_list = frameTemp1->GetGates();
+		std::shared_ptr<std::vector<std::pair<int64_t, int64_t>>> data_count_list = frameTemp1->GetGates();
 
 		size_t nSize = data_count_list->size();
 		for (size_t nIndex = 0; nIndex < nSize; nIndex++)
